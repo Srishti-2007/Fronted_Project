@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+     <div class="main-title">
+        <h1><span>⏳</span> AGE CLOCK</h1>
+        <p>Every second of your life, counted.</p>
+    </div>
+    <!-- PART 1: Pehle yeh dikhega -->
+    <div id="initialtext" class="container">
+        <h1>Kindly Enter Your Date of Birth</h1>
+        <div class="setting">
+            <input id="dobinput" type="date">
+            <button id="dobbutton">Add DOB</button>
+        </div>
+    </div>
+
+    <!-- PART 2: DOB ke baad yeh dikhega -->
+    <div id="afterdobtext" class="container hide">
+        <h1>How Much Life Journey Covered, Till Now</h1>
+        <div class="time-container">
+            <h2><div id="year">0</div>Year</h2>
+            <h2><div id="month">0</div>Month</h2>
+            <h2><div id="day">0</div>Day</h2>
+            <h2><div id="hour">0</div>Hour</h2>
+            <h2><div id="minute">0</div>Minute</h2>
+            <h2><div id="second">0</div>Second</h2>
+        </div>
+        <button id="resetbutton">Reset</button>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- PAGE LOAD
+    ↓
+[DOB Input + Button] ← sirf yeh dikhta hai
+    ↓
+User date select kare + "Add DOB" click kare
+    ↓
+setdobhandler() chalta hai
+    ↓
+Input/Button HIDE → Timer SHOW
+    ↓
+updateTimer() ek baar turant chalta hai
+    ↓
+setInterval → har 1000ms (1 second) mein updateTimer() chalta rehta hai
+    ↓
+User "Reset" click kare
+    ↓
+resetHandler() chalta hai
+    ↓
+Timer HIDE → Input/Button WAPAS SHOW
+    ↓
+clearInterval → timer band -->

@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+html,body {
+    font-family: 'Oswald',sans-serif;
+    height: 100%;
+    overflow: hidden;  /* ← Scrollbar hatane ke liye */
+}
+.background{
+    background-image: url(image1.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   /* ← Sab kuch vertically center */
+    gap: 1.5rem;
+} 
+.container{
+    color: white;
+    /* display: grid; */
+    /* place-items: center; */
+    text-align: center;
+    /* height: 100vh; */
+}
+.container h1 {
+    font-size: 2.5rem;
+     margin-bottom: 1.5rem;
+}
+.setting{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+/* .setting button {
+    padding: 0.6rem 1.5rem; 
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+} */
+.setting button:hover {
+    background-color: gold;   /* ← hover effect bonus! */
+}
+.setting input{
+    padding: 0.srem 1rem;
+    font-size: 1rem;
+}
+.time-container{
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.time-container h2{
+    font-size: 2rem;
+}
+.time-container div{
+    font-size: 3rem;
+}
+.hide {
+    display: none;
+}
+.setting input[type="date"] {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);  
+    color: white;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    outline: none;
+    font-family: 'Oswald', sans-serif;
+}
+/* Date picker ke andar wala text */
+.setting input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);   /* Calendar icon white ho jaayega */
+    cursor: pointer;
+}
+.setting button {
+    padding: 0.7rem 1.8rem;
+    background: linear-gradient(135deg, #f5d020, #f53803); /* gradient */
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    /* font-family: 'Oswald', sans-serif; */
+    letter-spacing: 1px;
+    /* transition: transform 0.2s, box-shadow 0.2s; */
+    /* box-shadow: 0 4px 15px rgba(245, 56, 3, 0.4); */
+}
+.setting button:hover {
+    transform: scale(1.05);     /* thoda bada ho */
+    box-shadow: 0 6px 20px rgba(245, 56, 3, 0.6);
+}
+#resetbutton {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    /* background: rgba(255,255,255,0.15); */
+     background: linear-gradient(135deg, #f5d020, #f53803); /* gradient */
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 25px;        /* pill shape */
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    /* backdrop-filter: blur(5px); */
+    /* transition: all 0.3s; */
+    /* font-family: 'Oswald', sans-serif; */
+    letter-spacing: 1px;
+}
+#resetbutton:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+.main-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.main-title h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #ffffff, gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-title p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 0.3rem;
+}
+
+/* Timer cards  */
+ .time-container div {
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 0 0 15px gold, 0 0 30px rgba(255,215,0,0.5);
+    font-weight: bold;
+}
+
+.time-container h2 {
+    background: rgba(0,0,0,0.4);   /* ← Dark background — numbers clear dikhenge */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    min-width: 90px;
+    text-align: center;
+}
+/* .container h1 {
+    background: linear-gradient(135deg, #fff, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+ .container h1 {
+    background: linear-gradient(135deg, #fff, gold);
+    
+    -webkit-background-clip: text;   /* Chrome/Safari */
+    background-clip: text;           /* ← Yeh add karo — Standard way */
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent;              /* ← Yeh bhi add karo */
+}
+.time-container h2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255,215,0,0.4);
+    transition: all 0.3s;
+}
+/* Sirf emoji ko alag color do */
+.main-title h1 span {
+    -webkit-text-fill-color: gold;  /* emoji visible ho jaayega */
+}
