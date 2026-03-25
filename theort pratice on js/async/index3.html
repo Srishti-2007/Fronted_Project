@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p1=new Promise((resolve,reject) =>{
+           setTimeout(()=>{
+             resolve("promise resolved Value!")
+           },5000)
+        });
+         const p2=new Promise((resolve,reject) =>{
+           setTimeout(()=>{
+             resolve("promise resolved Value!")
+           },10000)
+        });
+        async function getvalue(){
+            console.log("hello worls")
+            const val1=await p1;
+            console.log("namaste")
+            console.log(val1)
+
+            const val2=await p2;
+            console.log("namaste2")
+            console.log(val2)
+
+        }
+
+        getvalue();
+
+    </script>
+</body>
+</html>
